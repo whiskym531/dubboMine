@@ -1,0 +1,16 @@
+server:
+  port: 9101
+  servlet:
+    context-path: /
+
+dubbo:
+  application:
+    name: provider
+  registry:
+    protocol: zookeeper
+    address: 127.0.0.1:2181
+  protocol:
+    name: dubbo
+    port: 20880
+  scan:
+    base-packages: com.example.provider.service
